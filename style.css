@@ -21,12 +21,15 @@ body{
 }
 
 .navBar-container{
-opacity: 0.86;
-background: rgba(255, 255, 255, 0.55);
+/* opacity: 0.5; */
+/* background: rgba(255, 255, 255, 0.55); */
 /* pb avec le blur */
 /* filter: blur(25px); */
-border: 10PX solid yellow;
-width: 100%;
+margin: auto;
+position: absolute;
+top: 50%; right: 50%;
+transform: translate(50%,-50%);
+/* width: 100%; */
 }
 
 .navBar-container >h1{
