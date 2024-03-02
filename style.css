@@ -11,18 +11,23 @@ body, p, img, h1, h2 {
     padding: 0;
     margin: 0;
     font-family: 'switzer';
-    color : #282828;
+    color : black;
 }
 
 body{
     background: url(./backgroundIMG/Noise\ &\ Texture.png);
     background-size: cover;
-    height:100vh;
+    width: 100%;
+    height: 100%;
 }
 
 main{
-    width: 95%;
-    margin: 2% 1.5% 0 1.5%;
+    width: 100%;
+    height: 100%;
+    margin: 2% 0% 0 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navBar-container{
@@ -32,13 +37,14 @@ main{
 .navBar-container >h1{
     font-family: 'switzer';
     font-size: 2vw;
-    font-weight:200;
+    font-weight:400;
     text-align: center;
 }
 
 
 
 .smaller-main-container{
+    width: 95%;
     border-radius: 10px;
     background: rgb(210 210 210 / 20%);
     backdrop-filter: blur(6.5px);
@@ -48,16 +54,16 @@ main{
 
 .name{
     font-family: "switzer";
-    font-weight: 900;
+    font-weight: 500;
     letter-spacing: 0.4vw;
     font-size: 5vw;
     padding: 1.3% 0% 4% 1.5%;
 }
 
 .subtitle{
-    font-size: 3vw;
+    font-size: 2.2vw;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     padding-left:05%;
     padding-bottom: 4.5%;
 }
@@ -67,17 +73,17 @@ main{
 }
 
 .paragraphe1{
-    color: #282828;
-    font-size: 2.3vw;
-    font-weight: 300;
+    font-size: 1.9vw;
+    font-weight: 400;
     line-height: normal;
     padding:4.5% 0 0 5%;;
-
+    width: max-content;
 }
 
 .icons-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 4% 0 4% 0;
 }
 
 .icon-circle {
@@ -90,7 +96,6 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 4% 5%;
 }
 
 .icon-circle > img{
