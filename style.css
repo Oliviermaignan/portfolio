@@ -147,3 +147,81 @@ main:hover{
         opacity: 100%;
     }
   }
+
+
+@media only screen and (max-width: 600px) {
+    .navBar-container >h1{
+        font-size: 5vw;
+    }
+    
+
+
+    .name{
+        font-size: 10vw;
+    }
+    
+    .subtitle{
+        font-size: 5vw;
+        padding-left:3%;
+    }
+    
+    .paragraphe1{
+        font-size: 5vw;
+        padding:0% 0 0 3%;;
+    }
+
+
+
+    .icon-circle {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .icon-circle > .mail-icon{
+        scale:0.45;
+    }
+    .icon-circle > .cv-icon{
+        scale:0.45;
+    }
+    .icon-circle > .linkedin-icon{
+        scale:0.45;
+    }
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+    .navBar-container >h1{
+        font-size: 3vw;
+    }
+    
+
+
+    .name{
+        font-size: 6vw;
+    }
+    
+    .subtitle{
+        font-size: 3.5vw;
+        padding-left:3%;
+    }
+    
+    .paragraphe1{
+        font-size: 3.5vw;
+        padding:0% 0 0 3%;;
+    }
+
+    .icon-circle {
+        width: 13vw;
+        height: 13vw;
+    }
+
+    .icon-circle > .mail-icon{
+        scale:0.6;
+    }
+    .icon-circle > .cv-icon{
+        scale:0.6;
+    }
+    .icon-circle > .linkedin-icon{
+        scale:0.6;
+    }
+}
