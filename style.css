@@ -1,90 +1,226 @@
 @font-face {
-    font-family: 'Alte Haas Grotesk';
-    src: url(./font/AlteHaasGroteskRegular.ttf);
+    font-family: 'switzer';
+    src: url(./font/Switzer-Variable.ttf);
 }
 @font-face {
-    font-family: 'Arupala Grotesk';
-    src: url(./font/ArupalaGrotesk-Ultra.ttf);
+    font-family: 'switzerItalic';
+    src: url(./font/Switzer-VariableItalic.ttf);
 }
 
-body, p, img, h1 {
+body, p, img, h1, h2, main, header, div{
     padding: 0;
     margin: 0;
-
+    font-family: 'switzer';
+    color : black;
 }
 
 body{
-    background: url(./backgroundIMG/Noise\ &\ Texture.png), rgb(255, 255, 255) 0% 0% / 100px 100px repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    animation: appear 5s 1 ease;
+    background: url(./backgroundIMG/Noise\ &\ Texture.png);
+    background-size: cover;
 }
 
-.navBar-container{
-/* opacity: 0.5; */
-/* background: rgba(255, 255, 255, 0.55); */
-/* pb avec le blur */
-/* filter: blur(25px); */
-margin: auto;
-position: absolute;
-top: 50%; right: 50%;
-transform: translate(50%,-50%);
-/* width: 100%; */
+main{
+    opacity: 0%;
+    animation: appear 1s ease-in forwards;
+    height: 85svh;
+    width: auto;
+    margin: 2% 2.5% 0% 2.5%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    backdrop-filter: blur(5.5px);
+    box-shadow: 0px 0px 10px 2px #fffcf749;
+}
+
+main:hover{
+    cursor :crosshair ;
 }
 
 .navBar-container >h1{
-color: #000;
-font-family: "Alte Haas Grotesk";
-font-size: 2.5rem;
-font-weight: 400;
-line-height: normal;
-letter-spacing: -0.125rem;
-text-align: center;
+    font-family: 'switzer';
+    font-size: 2vw;
+    font-weight:400;
+    text-align: center;
 }
 
-.main-container{
-border: solid 1px black;
-width: 100%;
-height: 100%;
-}
-
-.smaller-main-container{
-border-radius: 0.625rem;
-background: rgba(255, 255, 255, 0.31);
-backdrop-filter: blur(5.5px);
-box-shadow: inset 0px 0px 40px 40px #b8b8b8;
+.upper-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 70%;
+    margin-top: -2%;
+    margin-bottom: 2%;
 }
 
 .name{
-    color: #000;
-    font-family: "Arupala Grotesk";
-    font-size: 5rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    letter-spacing: 0.45rem;
+    color: rgba(0, 0, 0, 0.783);
+    font-family: "switzer";
+    font-weight: 500;
+    letter-spacing: 0.4vw;
+    font-size: 5vw;
+    padding: 0% 0% 0% 1.5%;
 }
 
 .subtitle{
-color: #000;
-font-family: "Alte Haas Grotesk";
-font-size: 2.5rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.175rem;
+    font-size: 2.2vw;
+    font-style: normal;
+    font-weight: 400;
+    padding-left:05%;
+}
+
+.paragraphe1{
+    width: auto;
+    font-size: 2.2vw;
+    font-weight: 400;
+    line-height: normal;
+    padding:0% 0 0 5%;;
 }
 
 .icons-container{
     display: flex;
+    justify-content: space-evenly;
 }
 
 .icon-circle {
-    border: 1px solid black;
+    /* position: relative; */
     fill: rgba(255, 248, 235, 0.20);
-    filter: drop-shadow(0px 0px 20px #FFFCF7);
+    box-shadow: 0 0 20px 0 #FFFCF7;
     border-radius: 50%;
-    width: 8.731rem;
-    height: 8.731rem;
+    width: 8.5vw;
+    height: 8.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
 }
 
+.icon-circle:hover{
+    cursor: pointer;
+    background-color: #fdf8f162;
+    box-shadow: 0px 0px 25px 6px #FFFCF7;
+}
+
+/* animation stuff */
+.icon-circle > .mail-icon{
+    opacity: 0;
+    animation: iconAppear 1s 1.3s ease-in forwards; 
+}
+.icon-circle > .cv-icon{
+    opacity: 0;
+    animation: iconAppear 1s 1.6s ease-in forwards; 
+}
+.icon-circle > .linkedin-icon{
+    opacity: 0;
+    animation: iconAppear 1s 1.9s ease-in forwards; 
+}
+
+.cv-icon{
+    scale: 90%;
+}
+
+.linkedin-icon{
+    scale: 95%;
+    transform: translateY(-05%);
+}
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0%;
+        backdrop-filter: blur(0px);
+    }
+  
+    to {
+        opacity: 100%;
+        backdrop-filter: blur(5.5px);
+    }
+  }
+@keyframes iconAppear {
+    from {
+        opacity: 0%;
+    }
+  
+    to {
+        opacity: 100%;
+    }
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .navBar-container >h1{
+        font-size: 5vw;
+    }
+    
+
+
+    .name{
+        font-size: 10vw;
+    }
+    
+    .subtitle{
+        font-size: 5vw;
+        padding-left:3%;
+    }
+    
+    .paragraphe1{
+        font-size: 5vw;
+        padding:0% 0 0 3%;;
+    }
+
+
+
+    .icon-circle {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .icon-circle > .mail-icon{
+        scale:0.45;
+    }
+    .icon-circle > .cv-icon{
+        scale:0.45;
+    }
+    .icon-circle > .linkedin-icon{
+        scale:0.45;
+    }
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+    .navBar-container >h1{
+        font-size: 3vw;
+    }
+    
+
+    .name{
+        font-size: 6vw;
+    }
+    
+    .subtitle{
+        font-size: 3.5vw;
+        padding-left:3%;
+    }
+    
+    .paragraphe1{
+        font-size: 3.5vw;
+        padding:0% 0 0 3%;;
+    }
+
+    .icon-circle {
+        width: 13vw;
+        height: 13vw;
+    }
+
+    .icon-circle > .mail-icon{
+        scale:0.6;
+    }
+    .icon-circle > .cv-icon{
+        scale:0.6;
+    }
+    .icon-circle > .linkedin-icon{
+        scale:0.6;
+    }
+}
