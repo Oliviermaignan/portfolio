@@ -7,7 +7,7 @@
     src: url(./font/Switzer-VariableItalic.ttf);
 }
 
-body, p, img, h1, h2 {
+body, p, img, h1, h2, main, header, div{
     padding: 0;
     margin: 0;
     font-family: 'switzer';
@@ -17,21 +17,17 @@ body, p, img, h1, h2 {
 body{
     background: url(./backgroundIMG/Noise\ &\ Texture.png);
     background-size: cover;
-    width: 100%;
-    height: 100%;
 }
 
 main{
-    width: 100%;
-    height: 100%;
-    margin: 2% 0% 0 0%;
+    height: 85svh;
+    width: auto;
+    margin: 2% 2.5% 0% 2.5%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navBar-container{
-   margin: 1% 0% 3% 0;
+    flex-direction: column;
+    border-radius: 10px;
+    backdrop-filter: blur(5.5px);
+    box-shadow: 0px 0px 10px 2px #fffcf749;
 }
 
 .navBar-container >h1{
@@ -41,23 +37,23 @@ main{
     text-align: center;
 }
 
-
-
-.smaller-main-container{
-    width: 95%;
-    border-radius: 10px;
-    background: rgb(210 210 210 / 20%);
-    backdrop-filter: blur(6.5px);
-    box-shadow: 0px 0px 10px 2px #fffcf749;
+.upper-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 70%;
+    margin-top: -2%;
+    margin-bottom: 2%;
 }
 
-
 .name{
+    color: rgba(0, 0, 0, 0.783);
     font-family: "switzer";
     font-weight: 500;
     letter-spacing: 0.4vw;
     font-size: 5vw;
-    padding: 1.3% 0% 4% 1.5%;
+    padding: 0% 0% 0% 1.5%;
 }
 
 .subtitle{
@@ -65,44 +61,38 @@ main{
     font-style: normal;
     font-weight: 400;
     padding-left:05%;
-    padding-bottom: 4.5%;
-}
-
-.lign{
-    padding-left:05%;
 }
 
 .paragraphe1{
-    font-size: 1.9vw;
+    width: auto;
+    font-size: 2.2vw;
     font-weight: 400;
     line-height: normal;
-    padding:4.5% 0 0 5%;;
-    width: max-content;
+    padding:0% 0 0 5%;;
 }
 
 .icons-container{
     display: flex;
     justify-content: space-evenly;
-    padding: 4% 0 4% 0;
 }
 
 .icon-circle {
-    position: relative;
+    /* position: relative; */
     fill: rgba(255, 248, 235, 0.20);
     box-shadow: 0 0 20px 0 #FFFCF7;
     border-radius: 50%;
-    width: 10%;
-    padding-top: 10%;
+    width: 8.5vw;
+    height: 8.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.icon-circle > img{
-    width: 55%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.cv-icon{
+    scale: 90%;
 }
 
+.linkedin-icon{
+    scale: 95%;
+    transform: translateY(-05%);
+}
