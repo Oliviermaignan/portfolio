@@ -15,11 +15,14 @@ body, p, img, h1, h2, main, header, div{
 }
 
 body{
+    animation: appear 5s 1 ease;
     background: url(./backgroundIMG/Noise\ &\ Texture.png);
     background-size: cover;
 }
 
 main{
+    opacity: 0%;
+    animation: appear 1s ease-in forwards;
     height: 85svh;
     width: auto;
     margin: 2% 2.5% 0% 2.5%;
@@ -28,6 +31,10 @@ main{
     border-radius: 10px;
     backdrop-filter: blur(5.5px);
     box-shadow: 0px 0px 10px 2px #fffcf749;
+}
+
+main:hover{
+    cursor :crosshair ;
 }
 
 .navBar-container >h1{
@@ -86,6 +93,27 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.25s;
+}
+
+.icon-circle:hover{
+    cursor: pointer;
+    background-color: #fdf8f162;
+    box-shadow: 0px 0px 25px 6px #FFFCF7;
+}
+
+/* animation stuff */
+.icon-circle > .mail-icon{
+    opacity: 0;
+    animation: iconAppear 1s 1.3s ease-in forwards; 
+}
+.icon-circle > .cv-icon{
+    opacity: 0;
+    animation: iconAppear 1s 1.6s ease-in forwards; 
+}
+.icon-circle > .linkedin-icon{
+    opacity: 0;
+    animation: iconAppear 1s 1.9s ease-in forwards; 
 }
 
 .cv-icon{
@@ -96,3 +124,26 @@ main{
     scale: 95%;
     transform: translateY(-05%);
 }
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0%;
+        backdrop-filter: blur(0px);
+    }
+  
+    to {
+        opacity: 100%;
+        backdrop-filter: blur(5.5px);
+    }
+  }
+@keyframes iconAppear {
+    from {
+        opacity: 0%;
+    }
+  
+    to {
+        opacity: 100%;
+    }
+  }
